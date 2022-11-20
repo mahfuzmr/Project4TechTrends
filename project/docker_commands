@@ -13,8 +13,9 @@ docker run -dp 7111:3111 techtrends
 
 Image: adf3642ccda5a2afe210f9ce358c6ed38506630027fe3c977c5a0b571520e368
 
-# logs
-
+## Docker commands used to get the application logs
+docker logs adf3642ccda5a2afe210f9ce358c6ed38506630027fe3c977c5a0b571520e368
+# log output
 Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
 172.17.0.1 - - [20/Nov/2022 16:51:53] "GET / HTTP/1.1" 200 -
 172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /static/css/main.css HTTP/1.1" 200 -
@@ -22,9 +23,25 @@ Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
 172.17.0.1 - - [20/Nov/2022 16:54:21] "GET /healthz HTTP/1.1" 200 -
 172.17.0.1 - - [20/Nov/2022 16:54:29] "GET /metrics HTTP/1.1" 200 -
 
+## Docker image creation on dockerhub repository
+docker tag techtrends mahfuzmr/techtrends:v1.0.0 
 
-## Docker commands used to get the application logs
-# TODO: insert the docker logs command
+docker push mahfuzmr/techtrends:v1.0.0
+
 
 ## Logs from the container running the TechTrends application
+docker ps 
+
+CONTAINER ID   IMAGE        COMMAND           CREATED          STATUS          PORTS                    NAMES
+adf3642ccda5   techtrends   "python app.py"   33 minutes ago   Up 33 minutes   0.0.0.0:7111->3111/tcp   serene_nash
+
 # TODO: paste logs from the Docker container 
+docker logs adf3642ccda5
+
+172.17.0.1 - - [20/Nov/2022 16:51:53] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /static/css/main.css HTTP/1.1" 200 -
+172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /favicon.ico HTTP/1.1" 404 -
+172.17.0.1 - - [20/Nov/2022 16:54:21] "GET /healthz HTTP/1.1" 200 -
+172.17.0.1 - - [20/Nov/2022 16:54:29] "GET /metrics HTTP/1.1" 200 -
+172.17.0.1 - - [20/Nov/2022 16:57:05] "GET / HTTP/1.1" 200 -
+172.17.0.1 - - [20/Nov/2022 16:57:05] "GET /static/css/main.css HTTP/1.1" 304 -
