@@ -1,0 +1,11 @@
+kind: Applicationmetadata:  name: techtrends-staging  namespace: argocdspec:  destination:
+    namespace: default    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      valueFiles:
+      - values-staging.yaml
+    path: project/helm
+    repoURL: https://github.com/mahfuzmr/Project4TechTrends
+    targetRevision: HEAD
+  syncPolicy: {}
