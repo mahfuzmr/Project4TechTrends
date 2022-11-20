@@ -74,7 +74,7 @@ def create():
             return redirect(url_for('index'))
 
     return render_template('create.html')
-
+#Added end point for health check
 @app.route('/healthz')
 def healthz():
     response = app.response_class(
@@ -83,6 +83,18 @@ def healthz():
             mimetype='application/json'
     )
     app.logger.debug(logger_message('Test debug message'))
+    return response
+#end point for metrics
+@app.route('/metrics')
+def metrics():
+    connection = get_db_connection()
+    posts = connection.execute('SELECT * FROM posts').fetchall()
+    connection.close()
+    response = app.response_class(
+            response=json.dumps({"db_connection_count": connection_count, "post_count": len(posts)}),
+            status=200,
+            mimetype='application/json'
+    )
     return response
 
 # start the application on port 3111
