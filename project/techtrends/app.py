@@ -46,13 +46,16 @@ def index():
 def post(post_id):
     post = get_post(post_id)
     if post is None:
-      return render_template('404.html'), 404
+        app.logger.error(logger_message("Non existing post was retrieved."))
+        return render_template('404.html'), 404
     else:
-      return render_template('post.html', post=post)
+        app.logger.debug(logger_message(f"Post \"{post['title']}\" was retrieved."))
+        return render_template('post.html', post=post)
 
 # Define the About Us page
 @app.route('/about')
 def about():
+    app.logger.debug(logger_message("About page retrieved."))
     return render_template('about.html')
 
 # Define the post creation functionality 
@@ -70,7 +73,7 @@ def create():
                          (title, content))
             connection.commit()
             connection.close()
-
+            app.logger.debug(logger_message(f"Post \"{title}\" created."))
             return redirect(url_for('index'))
 
     return render_template('create.html')
@@ -82,7 +85,7 @@ def healthz():
             status=200,
             mimetype='application/json'
     )
-    app.logger.debug(logger_message('Test debug message'))
+    app.logger.debug(logger_message('Data base helth check'))
     return response
 #end point for metrics
 @app.route('/metrics')
@@ -101,17 +104,10 @@ def metrics():
 if __name__ == "__main__":
     logging.basicConfig(
     level=logging.DEBUG,
+    format='%(asctime)s - %(levelname)s - %(message)s',
     handlers=[
         logging.StreamHandler(sys.stdout),
         logging.StreamHandler(sys.stderr)
         ]
-    )
-    # set logger to handle STDOUT and STDERR 
-    stdout_handler = sys.stdout
-    stderr_handler = sys.stderr
-    handlers = [stderr_handler, stdout_handler]
-    # format output
-    format_output = '%(asctime)s - %(levelname)s - %(message)s'
-
-    logging.basicConfig(format=format_output, level=logging.DEBUG, handlers=handlers)
+    )    
     app.run(host='0.0.0.0', port='3111')

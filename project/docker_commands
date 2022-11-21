@@ -16,12 +16,52 @@ Image: adf3642ccda5a2afe210f9ce358c6ed38506630027fe3c977c5a0b571520e368
 ## Docker commands used to get the application logs
 docker logs adf3642ccda5a2afe210f9ce358c6ed38506630027fe3c977c5a0b571520e368
 # log output
-Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /static/css/main.css HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /favicon.ico HTTP/1.1" 404 -
-172.17.0.1 - - [20/Nov/2022 16:54:21] "GET /healthz HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:54:29] "GET /metrics HTTP/1.1" 200 -
+PS C:\Users\m.rahman\Documents\DevOps\Project4TechTrends\project\techtrends> python app.py
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-11-21 09:22:34,647 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-11-21 09:22:34,647 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-11-21 09:22:34,648 - INFO -  * Running on http://192.168.2.101:3111/ (Press CTRL+C to quit)
+2022-11-21 09:22:34,648 - INFO -  * Running on http://192.168.2.101:3111/ (Press CTRL+C to quit)
+2022-11-21 09:22:41,449 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:41,449 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:41,552 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:41,552 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:45,407 - DEBUG - Mon Nov 21 09:22:45 2022, About page retrieved.
+2022-11-21 09:22:45,407 - DEBUG - Mon Nov 21 09:22:45 2022, About page retrieved.
+2022-11-21 09:22:45,409 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /about HTTP/1.1" 200 -
+2022-11-21 09:22:45,409 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /about HTTP/1.1" 200 -
+2022-11-21 09:22:45,432 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:45,432 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:49,122 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /create HTTP/1.1" 200 -
+2022-11-21 09:22:49,122 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /create HTTP/1.1" 200 -
+2022-11-21 09:22:49,151 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:49,151 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:59,147 - DEBUG - Mon Nov 21 09:22:59 2022, Post "new" created.
+2022-11-21 09:22:59,147 - DEBUG - Mon Nov 21 09:22:59 2022, Post "new" created.
+2022-11-21 09:22:59,148 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "POST /create HTTP/1.1" 302 -
+2022-11-21 09:22:59,148 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "POST /create HTTP/1.1" 302 -
+2022-11-21 09:22:59,166 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:59,166 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:59,202 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:59,202 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:05,394 - DEBUG - Mon Nov 21 09:23:05 2022, Post "Test new post" was retrieved.
+2022-11-21 09:23:05,394 - DEBUG - Mon Nov 21 09:23:05 2022, Post "Test new post" was retrieved.
+2022-11-21 09:23:05,398 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /9 HTTP/1.1" 200 -
+2022-11-21 09:23:05,398 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /9 HTTP/1.1" 200 -
+2022-11-21 09:23:05,433 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:05,433 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:10,035 - ERROR - Mon Nov 21 09:23:10 2022, Non existing post was retrieved.
+2022-11-21 09:23:10,035 - ERROR - Mon Nov 21 09:23:10 2022, Non existing post was retrieved.
+2022-11-21 09:23:10,037 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /20 HTTP/1.1" 404 -
+2022-11-21 09:23:10,037 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /20 HTTP/1.1" 404 -
+2022-11-21 09:23:10,071 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:10,071 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /static/css/main.css HTTP/1.1" 304 -
 
 ## Docker image creation on dockerhub repository
 docker tag techtrends mahfuzmr/techtrends:v1.0.0 
@@ -38,10 +78,50 @@ adf3642ccda5   techtrends   "python app.py"   33 minutes ago   Up 33 minutes   0
 # TODO: paste logs from the Docker container 
 docker logs adf3642ccda5
 
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /static/css/main.css HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /favicon.ico HTTP/1.1" 404 -
-172.17.0.1 - - [20/Nov/2022 16:54:21] "GET /healthz HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:54:29] "GET /metrics HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:57:05] "GET / HTTP/1.1" 200 -
-172.17.0.1 - - [20/Nov/2022 16:57:05] "GET /static/css/main.css HTTP/1.1" 304 -
+PS C:\Users\m.rahman\Documents\DevOps\Project4TechTrends\project\techtrends> python app.py
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+2022-11-21 09:22:34,647 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-11-21 09:22:34,647 - WARNING -  * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
+2022-11-21 09:22:34,648 - INFO -  * Running on http://192.168.2.101:3111/ (Press CTRL+C to quit)
+2022-11-21 09:22:34,648 - INFO -  * Running on http://192.168.2.101:3111/ (Press CTRL+C to quit)
+2022-11-21 09:22:41,449 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:41,449 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:41,552 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:41,552 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:41] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:45,407 - DEBUG - Mon Nov 21 09:22:45 2022, About page retrieved.
+2022-11-21 09:22:45,407 - DEBUG - Mon Nov 21 09:22:45 2022, About page retrieved.
+2022-11-21 09:22:45,409 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /about HTTP/1.1" 200 -
+2022-11-21 09:22:45,409 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /about HTTP/1.1" 200 -
+2022-11-21 09:22:45,432 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:45,432 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:45] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:49,122 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /create HTTP/1.1" 200 -
+2022-11-21 09:22:49,122 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /create HTTP/1.1" 200 -
+2022-11-21 09:22:49,151 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:49,151 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:49] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:59,147 - DEBUG - Mon Nov 21 09:22:59 2022, Post "new" created.
+2022-11-21 09:22:59,147 - DEBUG - Mon Nov 21 09:22:59 2022, Post "new" created.
+2022-11-21 09:22:59,148 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "POST /create HTTP/1.1" 302 -
+2022-11-21 09:22:59,148 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "POST /create HTTP/1.1" 302 -
+2022-11-21 09:22:59,166 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:59,166 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET / HTTP/1.1" 200 -
+2022-11-21 09:22:59,202 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:22:59,202 - INFO - 192.168.2.101 - - [21/Nov/2022 09:22:59] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:05,394 - DEBUG - Mon Nov 21 09:23:05 2022, Post "Test new post" was retrieved.
+2022-11-21 09:23:05,394 - DEBUG - Mon Nov 21 09:23:05 2022, Post "Test new post" was retrieved.
+2022-11-21 09:23:05,398 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /9 HTTP/1.1" 200 -
+2022-11-21 09:23:05,398 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /9 HTTP/1.1" 200 -
+2022-11-21 09:23:05,433 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:05,433 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:05] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:10,035 - ERROR - Mon Nov 21 09:23:10 2022, Non existing post was retrieved.
+2022-11-21 09:23:10,035 - ERROR - Mon Nov 21 09:23:10 2022, Non existing post was retrieved.
+2022-11-21 09:23:10,037 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /20 HTTP/1.1" 404 -
+2022-11-21 09:23:10,037 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /20 HTTP/1.1" 404 -
+2022-11-21 09:23:10,071 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /static/css/main.css HTTP/1.1" 304 -
+2022-11-21 09:23:10,071 - INFO - 192.168.2.101 - - [21/Nov/2022 09:23:10] "GET /static/css/main.css HTTP/1.1" 304 -
+
