@@ -66,12 +66,31 @@ All the docker commands to deploy the project as a docker image are located in t
 
       ```Bash
       # log output
-      Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-      172.17.0.1 - - [20/Nov/2022 16:51:53] "GET / HTTP/1.1" 200 -
-      172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /static/css/main.css HTTP/1.1" 200 -
-      172.17.0.1 - - [20/Nov/2022 16:51:53] "GET /favicon.ico HTTP/1.1" 404 -
-      172.17.0.1 - - [20/Nov/2022 16:54:21] "GET /healthz HTTP/1.1" 200 -
-      172.17.0.1 - - [20/Nov/2022 16:54:29] "GET /metrics HTTP/1.1" 200 -
+        PS C:\Users\m.rahman\Documents\DevOps\Project4TechTrends\project\techtrends> python app.py
+        * Serving Flask app 'app' (lazy loading)
+        * Environment: production
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:00] "GET /about HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:00] "GET /about HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:00] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:00] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:03] "GET /create HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:03] "GET /create HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:03] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:03] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "POST /create HTTP/1.1" 302 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "POST /create HTTP/1.1" 302 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "GET / HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "GET / HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:14] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:20] "GET /9 HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:20] "GET /9 HTTP/1.1" 200 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:20] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:20] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:26] "GET /10 HTTP/1.1" 404 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:26] "GET /10 HTTP/1.1" 404 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:26] "GET /static/css/main.css HTTP/1.1" 304 -
+        INFO:werkzeug:192.168.2.101 - - [21/Nov/2022 09:05:26] "GET /static/css/main.css HTTP/1.1" 304 -
       ```
 ## CI GitHub Actions
 
